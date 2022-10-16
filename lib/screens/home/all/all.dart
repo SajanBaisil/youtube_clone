@@ -49,6 +49,22 @@ class All extends StatelessWidget {
     '7 lakhs views'
   ];
 
+  List released = [
+    '1 year ago',
+    '3 days ago',
+    '2 months ago'
+  ];
+  List profilename =[
+    'MrBeast',
+    'Kerala Blasters',
+    'How Ridiculus'
+  ];
+  List subscribers = [
+    '100M subscribers',
+    '30 Lakh subscribers',
+    '10M subscribers'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +81,7 @@ class All extends StatelessWidget {
                 children: List.generate(mainimages1.length, (index) {
                   return GestureDetector(
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const OnTapScreen())),
+                        builder: (context) =>  OnTapScreen(content: maintest1[index],image: mainimages1[index],views: shortsviews[index],released:released[index] ,profile: profileimage1[index],profilename:profilename[index],subscribers:subscribers[index]  ,))),
                     child: SizedBox(
                       width: double.infinity,
                       height: 300,
